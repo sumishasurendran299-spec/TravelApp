@@ -43,6 +43,11 @@ if (signupForm) {
       return;
     }
 
+    if (password.length < 8) {
+      alert("Password must be at least 8 characters with letters and numbers");
+      return;
+    }
+
     localStorage.setItem("user", JSON.stringify({ email, password }));
     alert("Signup Successful!");
     window.location.href = "Signin.html";
